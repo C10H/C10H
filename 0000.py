@@ -30,4 +30,4 @@ for i in lis:
         csv_writer.writerow(name + stuId + aggregation + subunit)
         print(str(i) + "号学生数据写入完成")
 
-f.close()
+f.close() 
