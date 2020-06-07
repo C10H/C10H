@@ -7,18 +7,11 @@ f = open("score_all.csv", mode='w+', encoding='utf-8')
 csv_writer = csv.writer(f)
 csv_writer.writerow(["姓名",
                      "学号",
-                     "总积分",
-                     "青年素养平台",
-                     "学术创新平台",
-                     "社会实践平台",
-                     "志愿服务平台",
-                     "校园文化平台",
-                     "理论修养平台",
-                     "附加分板块平台"])
-lis = list(range(10181546, 10181749)) + list(range(10173100, 10173350)) + list(range(19003536, 19003750))
+                     "附加分"])
+lis = list()
 for i in lis:
 
-    url = "http://zhsz.ecustyxytx.com:8080/session/login/"
+    url = ""
 
     payload = 'stuId=' + str(i) + '&password=' + str(i)
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) "
