@@ -5,13 +5,11 @@ import time
 
 f = open("score_all.csv", mode='w+', encoding='utf-8')
 csv_writer = csv.writer(f)
-csv_writer.writerow(["姓名",
-                     "学号",
-                     "附加分"])
+csv_writer.writerow(["请在这里输入表头"])
 lis = list()
 for i in lis:
 
-    url = ""
+    url = "请在这里输入url"
 
     payload = 'stuId=' + str(i) + '&password=' + str(i)
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -24,7 +22,7 @@ for i in lis:
         time.sleep(0.05)
     else:
         res1 = re.findall("<label>(.*?)</label>", response.text)
-        res2 = re.findall("青(.*?)</label>", response.text)
+        res2 = re.findall("(.*?)</label>", response.text)
         name = re.findall("(.*?)同学", res1[0])
         aggregation = re.findall("总积分为：(.*?)分", res1[0])
         stuId = [str(i)]
